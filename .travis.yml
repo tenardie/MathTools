@@ -1,0 +1,14 @@
+language: JAVA
+jdk: openjdk16
+script:
+  - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
+  - chmod +x $TRAVIS_BUILD_DIR/install-jdk.sh
+  - export JAVA_HOME=$HOME/openjdk16
+  - $TRAVIS_BUILD_DIR/install-jdk.sh -F 16 --target $JAVA_HOME
+deploy:
+  provider: releases
+  api_key: "$GH_OAUTH"
+  file: "FILE TO UPLOAD"
+  skip_cleanup: true
+  on:
+    tags: true

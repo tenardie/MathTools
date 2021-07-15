@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xyz.ylmzr.sub.Carpanlar">
+   <children>
+      <ImageView fx:id="imgBack" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#onBtnBack" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="13.0">
+         <image>
+            <Image url="@../../back.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="120.0" layoutY="45.0" text="Çarpanlar" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="BOTTOM_LEFT" prefWidth="130.0" text="Çarpanlarına ayırmak istediğiniz sayıyı yazınız." wrapText="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="60.0" />
+      <Button alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#onBtnRun" prefHeight="26.0" prefWidth="26.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="105.0">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../done.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="1.0" />
+         </font></Button>
+      <TextField fx:id="inputText" onAction="#onType" onKeyPressed="#onType" onKeyReleased="#onType" onKeyTyped="#onType" prefHeight="26.0" prefWidth="100.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="105.0" />
+      <Separator layoutX="168.0" layoutY="5.0" orientation="VERTICAL" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="155.0" AnchorPane.topAnchor="15.0" />
+      <TextArea fx:id="outText" editable="false" layoutX="161.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" promptText="Sonuç Burada Görünecek" wrapText="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0" />
+   </children>
+</AnchorPane>

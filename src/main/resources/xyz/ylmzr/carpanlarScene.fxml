@@ -25,7 +25,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Label alignment="BOTTOM_LEFT" prefWidth="130.0" text="Çarpanlarına ayırmak istediğiniz sayıyı yazınız." wrapText="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="60.0" />
+      <Label fx:id="labelGuide" alignment="BOTTOM_LEFT" graphicTextGap="0.0" prefWidth="130.0" text="Çarpanlarına ayırmak istediğiniz sayıyı yazınız." wrapText="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="60.0" />
       <Button alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#onBtnRun" prefHeight="26.0" prefWidth="26.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="105.0">
          <graphic>
             <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
@@ -37,8 +37,19 @@
          <font>
             <Font size="1.0" />
          </font></Button>
-      <TextField fx:id="inputText" onAction="#onType" onKeyPressed="#onType" onKeyReleased="#onType" onKeyTyped="#onType" prefHeight="26.0" prefWidth="100.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="105.0" />
+      <TextField fx:id="inputText" prefHeight="26.0" prefWidth="100.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="105.0" />
       <Separator layoutX="168.0" layoutY="5.0" orientation="VERTICAL" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="155.0" AnchorPane.topAnchor="15.0" />
-      <TextArea fx:id="outText" editable="false" layoutX="161.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" promptText="Sonuç Burada Görünecek" wrapText="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0" />
+      <TextArea fx:id="outText1" editable="false" layoutX="161.0" layoutY="10.0" prefHeight="80.0" prefWidth="125.0" promptText="Çarpanlar" wrapText="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0" />
+      <TextArea fx:id="outText2" editable="false" layoutX="165.0" layoutY="105.0" prefHeight="80.0" prefWidth="125.0" promptText="Asal Çarpanlar" wrapText="true" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="10.0" />
+      <RadioButton layoutX="22.0" layoutY="137.0" mnemonicParsing="false" selected="true" text="Tekli Mod">
+         <toggleGroup>
+            <ToggleGroup fx:id="mod" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton disable="true" layoutX="22.0" layoutY="161.0" mnemonicParsing="false" text="İkili Mod" toggleGroup="$mod">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </RadioButton>
    </children>
 </AnchorPane>
